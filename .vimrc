@@ -6,6 +6,10 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" show line numbers
+set number
+
 call vundle#begin()
 " " alternatively, pass a path where Vundle should install plugins
 call vundle#begin('~/.vim/plugins')
