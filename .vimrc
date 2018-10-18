@@ -1,6 +1,6 @@
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -16,9 +16,8 @@ call vundle#begin('~/.vim/plugins')
 
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'gtags.vim'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -66,3 +65,13 @@ colorscheme desert
 :nmap <C-n> :cn<CR>
 :nmap <C-p> :cp<CR>
 :nmap <C-\><C-]> :GtagsCursor<CR>
+
+" Useful Key Mappings
+" " Remove current buffer, but keep window
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" " Python tab configurations
+autocmd filetype python setlocal noexpandtab
+autocmd filetype python setlocal shiftwidth=4
+autocmd filetype python setlocal tabstop=4
+
